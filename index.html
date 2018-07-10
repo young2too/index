@@ -4,25 +4,102 @@
 <title>나의 이력서</title>
 <meta charset = "utf-8"></meta>
 </head>
+<style>
+#main_table{
+	caption-side : bottom;
+	box-shadow: 4px 4px;
+	border-collapse : collapse;
+}
+
+body{
+	background-color : rgb(230,230,255);
+}
+
+tr:hover{
+	background-color: #ffffff;
+}
+
+td{
+	text-align : center;
+}
+
+td[type = td1]{
+	text-shadow : 2px 2px 4px red;
+	-webkit-animation: mymove 3s infinite;
+}
+
+p{
+	text-align :left;
+}
+
+@-webkit-keyframes mymove {	
+	from {
+		text-shadow : 2px 2px 4px red;
+	}
+	to {
+		text-shadow : 2px 2px 8px blue;
+	}
+}
+
+a:hover{
+	background-color : cyan
+}
+
+input[type=button]{
+	align : center;
+	-webkit-transition-duration: 0.4s;
+	padding : 15px 20px;
+	cursor : pointer;
+	border : 2px solid #008cba;
+	background-color : #ffffff;
+	border-radius : 5px;
+}
+
+input[type=button]:hober{
+	background-color : #008cba;
+}
+
+</style>
+<script language ="JavaScript">
+function back_to_login(){
+	window.open("login.html","_self")
+}
+</script>
+
 <body>
-	<h1 align="center">나의 이력서</h1>
-	<table border = "1" align = "center">
+	<div>
+	<table id = "main_table" border = "1" align = "center">
+	<caption>
+	<a href="https://github.com/young2too/index" title="깃에서 보기">
+	Link for Github
+	</a>
+	</caption>
 		<tr>
-		<td rowspan = "2"><img src="내사진.jpg" border = "5"></td>
-		<td align="center"><h3>이영기<br>(李榮基)</h3></td>
-		<td align="center">생년월일 <br> 1993년 4월 28일</td>
-		<td align="center">경희대학교 4학년 재학중, 군필</td>
+		<td type = "td1" colspan = "4"><h2>나의 이력서</h2></td>
 		</tr>
 		<tr>
-		<td align="center">☎ 010-4860-9498</td>
-		<td align="center" colspan = "2">E-mail : young2too13@gmail.com</td>
+		<td rowspan = "2"><img src="내사진.jpg" border = "5"></td>
+		<td><h3><font color = >이영기<br>(李榮基)</font></h3></td>
+		<td>생년월일 <br> 1993년 4월 28일</td>
+		<td>
+		<a href="http://khu.ac.kr" title="경희대학교">
+		경희대학교 4학년 재학중, 군필</td>
+		</a>
+		</tr>
+		<tr>
+		<td>☎ 010-4860-9498</td>
+		<td colspan = "2">E-mail : young2too13@gmail.com</td>
 		</tr>
 		<tr>
 		<td colspan = "2">해본 것:C++, Java, Python</td>
 		<td colspan = "2">취미:보드게임</td>
 		</tr>
 		<tr>
-		<td colspan = "4">주소 : 경기도 안양시 만안구 만안로 35 빌로채 101동 1702호</td>
+		<td colspan = "4">
+		<a href = "http://naver.me/FuyGgGm8" title = "네이버 지도로 보기">
+		주소 : 경기도 안양시 만안구 만안로 35 빌로채 101동 1702호
+		</a>
+		</td>
 		</tr>
 		<tr>
 		<td colspan = "4">
@@ -34,6 +111,7 @@
 		그것과 함께 네이버 아이디로 로그인 api를 사용해 보기도 했습니다.<br>
 		이미 있는 것을 끌어다 쓰는 것도 쉬운 일이 아니라는걸 또 느꼈습니다.<br>
 		</p>
+		<hr>
 		<p>
 		이전에 일해본 경험이 있는건 보드게임카페에서 1년정도 일을 해봤고<br>
 		코딩에 관련된 일은 아직 해본 경험이 없습니다.<br>
@@ -43,5 +121,7 @@
 		</td>
 		</tr>
 	</table>
+	</div>
+	<input type="button" value="처음으로" onclick="back_to_login()">
 </body>
 </html>
