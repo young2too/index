@@ -46,16 +46,16 @@ a:hover{
 }
 
 input[type=button]{
-	align : center;
-	-webkit-transition-duration: 0.4s;
 	padding : 15px 20px;
+	transition-duration : 0.4s;
 	cursor : pointer;
 	border : 2px solid #008cba;
 	background-color : #ffffff;
 	border-radius : 5px;
+	warning : center;
 }
 
-input[type=button]:hober{
+input[type = button]:hover{
 	background-color : #008cba;
 }
 
@@ -92,7 +92,7 @@ function back_to_login(){
 		</tr>
 		<tr>
 		<td colspan = "2">해본 것:C++, Java, Python</td>
-		<td colspan = "2">취미:보드게임</td>
+		<td colspan = "2"><span style>취미:보드게임</span></td>
 		</tr>
 		<tr>
 		<td colspan = "4">
@@ -122,6 +122,8 @@ function back_to_login(){
 		</tr>
 	</table>
 	</div>
-	<input type="button" value="처음으로" onclick="back_to_login()">
+	<div align = "center">
+	<input type="button" id="to_login" value="처음으로" onclick="back_to_login()">
+	<div>
 </body>
 </html>
